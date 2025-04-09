@@ -1,11 +1,11 @@
 import os
 
 import discord
-import dotenv
 from discord import app_commands
 from discord.ext import commands
+from dotenv import load_dotenv
 
-dotenv.load_dotenv()
+load_dotenv("./.env")
 
 
 permissoes = discord.Intents.default()
@@ -42,4 +42,6 @@ async def Sync(ctx: commands.Context):
         await ctx.reply("somente meu dono pode atualizar")
 
 
-bot.run(os.getenv("TOKEN"))
+TOKEN = os.getenv("TOKEN")
+
+bot.run(TOKEN)

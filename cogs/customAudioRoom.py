@@ -20,7 +20,7 @@ class CustomAudioRoom(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-        self.category_id = int(os.getenv("VOICE_LOBBY"))
+        self.category_id = int(os.getenv("VOICE_CATEGORY_ID"))
         self.prefix = "🎧"
 
     @app_commands.command(name="criar_sala", description="Cria uma sala de voz")

@@ -15,7 +15,7 @@ class AudioRoom(commands.Cog):
 
     @commands.Cog.listener("on_voice_state_update")
     async def on_voice_state_update(self, member, before, after):
-        entrada_canal_id = int(os.getenv("VOICE"))
+        entrada_canal_id = int(os.getenv("LOBBY_AUTO_ROOM"))
         guild = member.guild
 
         # Checa se o usuário entrou no canal específico
